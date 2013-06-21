@@ -1,5 +1,26 @@
-%ul
-  - @menu.each do |m|
-    %li
-      = link_to show_page_path(m.plug) do
-        = m.title
+.header
+  =link_to root_path, :class => "header_logo" do
+    =image_tag "logo.jpg", :class => "logo-image"
+  .header-phone
+    %ul
+      %li
+        Телефон:
+        %span
+          8 (812) 448-53-77
+      %li
+        %a
+          Заказать обратный звонок
+  .header-adress
+    %ul
+      %li
+        Санкт-Петербург, Итальянская ул. д. 2
+      %li
+        офис на
+        %a
+          карте
+.nav
+  %ul
+    - @menu.each do |m|
+      %li
+        = link_to show_page_path(m.plug) do
+          = m.title

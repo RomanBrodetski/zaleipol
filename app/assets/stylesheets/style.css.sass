@@ -1,2 +1,43 @@
+$blue: #367ab9
+$black: #010101
+$darkblue: #195587
+
 body
-  background-color: red
+  background-color: white
+
+// header styles
+.header
+  background-color: white
+  text-align: center
+  height: 145px
+  .header_logo
+    display: inline-block
+    a
+      height: 75px
+      width: 290px
+  .header-phone
+    display: inline-block
+    height: 100%
+  .header-adress
+    display: inline-block
+    height: 100%
+
+// navigation styles
+.nav
+  background-color: $blue
+  text-align: center
+  ul
+    margin: 0
+    padding: 10px
+    li
+      display: inline
+      a
+        color: white
+        text-decoration: none
+        padding: 12px
+        &:hover
+          background-color: $darkblue
+
+// content styles
+.container
+  background-color: white
