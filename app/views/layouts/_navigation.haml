@@ -1,0 +1,5 @@
+%ul
+  - @menu.each do |m|
+    %li
+      = link_to show_page_path(m.plug) do
+        = m.title

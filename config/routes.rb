@@ -1,4 +1,7 @@
 Zaleipol::Application.routes.draw do
+  root :to => 'pages#show'
+  get "/:plug" => 'pages#show', :as => :show_page
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

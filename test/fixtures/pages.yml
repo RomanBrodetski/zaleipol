@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  .git: MyString
+  plug: MyString
+  title: MyString
+  text: MyText
+  parent_id: 1
+
+two:
+  .git: MyString
+  plug: MyString
+  title: MyString
+  text: MyText
+  parent_id: 1
