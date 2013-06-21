@@ -15,12 +15,12 @@
       %li
         Санкт-Петербург, Итальянская ул. д. 2
       %li
-        офис на
+        офис 505
         %a
-          карте
+          На карте
 .nav
   %ul
     - @menu.each do |m|
       %li
-        = link_to show_page_path(m.plug) do
+        = link_to show_page_path(m.plug), :class => "nav_with-submenu" do
           = m.title

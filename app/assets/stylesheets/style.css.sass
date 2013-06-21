@@ -4,28 +4,63 @@ $darkblue: #195587
 
 body
   background-color: white
+  font: 100% "elektra_text_proregular"
 
 // header styles
 .header
   background-color: white
   text-align: center
-  height: 145px
+  height: 150px
+  font-size: 80%
+  color: #222222
+  ul
+    list-style-type: none
+    height: 41px
+  li
+    padding-top: 2px
+  a
+    color: $black
+    text-decoration: underline
+
   .header_logo
+    padding-top: 40px
     display: inline-block
+    vertical-align: top
     a
       height: 75px
       width: 290px
+
   .header-phone
+    padding-top: 40px
+    padding-left: 120px
     display: inline-block
     height: 100%
+    text-align: left
+    vertical-align: top
+    ul
+      background: url('phone.png') no-repeat
+      padding-left: 25px
+    span
+      font-size: 130%
+
   .header-adress
+    padding-top: 40px
+    padding-left: 50px
     display: inline-block
     height: 100%
+    text-align: left
+    vertical-align: top
+    ul
+      background: url('point.jpg') no-repeat
+      padding-left: 40px
+
+  
 
 // navigation styles
 .nav
   background-color: $blue
   text-align: center
+  font-size: 90%
   ul
     margin: 0
     padding: 10px
@@ -34,9 +69,12 @@ body
       a
         color: white
         text-decoration: none
-        padding: 12px
+        padding: 10px
         &:hover
           background-color: $darkblue
+      .nav_with-submenu
+        margin-right: 20px
+        background: url('strike.png') no-repeat center right
 
 // content styles
 .container
