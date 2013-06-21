@@ -38,6 +38,7 @@
     / Add your site or application content here
     = render :partial => 'layouts/navigation'
     = yield
+    = render 'layouts/footer'
     / JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom
     = javascript_include_tag 'application'
     - if Rails.env.production?
