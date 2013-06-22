@@ -6,6 +6,7 @@ body
   background: url('bg.jpg') white
   font: 100% "elektra_text_proregular"
 
+
 // header styles
 .header
   background-color: white
@@ -13,6 +14,7 @@ body
   height: 150px
   font-size: 80%
   color: #222222
+  min-width: 990px
   ul
     list-style-type: none
     height: 41px
@@ -54,34 +56,52 @@ body
       background: url('point.jpg') no-repeat
       padding-left: 40px
 
-  
 
 // navigation styles
 .nav
   background-color: $blue
   text-align: center
   font-size: 90%
+  min-width: 825px
   ul
     margin: 0
     padding: 10px
     li
       display: inline
+      padding: 10px 5px 10px 15px
+      &:hover
+        background-color: $darkblue
       a
         color: white
         text-decoration: none
-        padding: 10px
-        &:hover
-          background-color: $darkblue
-      .nav_with-submenu
-        margin-right: 20px
-        background: url('strike.png') no-repeat center right
+        margin-right: 3px
+
 
 // content styles
-.container
+.main
   background-color: white
-  height: 300px
+  min-height: 300px
   box-shadow: 0px 2px 10px #999
+  .container
+    padding-top: 35px
+    width: 825px
+    margin: auto
 
+
+// sidemenu styles
+.sidemenu
+  background-color: red
+  display: inline-block
+  vertical-align: top
+
+// content styles
+.content
+  background-color: green
+  display: inline-block
+  vertical-align: top
+
+
+// footer styles
 .footer
   height: 50px
   font-size: 80%
