@@ -1,13 +1,24 @@
 .sidemenu
   %ul
     %li
-      Чистовая отделка
+      %span.item-selected
+        %a
+          Чистовая отделка
+        = image_tag "strike.png", :class => "nav_strike"
       %ul
         %li
-          Шпаклевка
+          %span
+            %a
+              Шпаклевка
         %li
-          Обои
+          %span
+            %a
+              Обои
         %li
-          Штукатурка
+          %span
+            %a
+              Штукатурка
     %li
-      Наружная отделка
+      %span
+        %a
+          Наружная отделка
