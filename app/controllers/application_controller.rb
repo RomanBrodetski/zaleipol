@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :navigation
+  before_filter :prepare_navigation
 
-  def navigation
+  def prepare_navigation
     @menu = Page.top
   end
 end
