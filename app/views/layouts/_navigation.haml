@@ -20,7 +20,7 @@
           На карте
 .nav
   %ul
-    - @menu.each do |m|
+    - @top_menu.each do |m|
       %li
         = link_to show_page_path(m.plug), :class => "nav_with-submenu" do
           = m.title

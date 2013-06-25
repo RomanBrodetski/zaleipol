@@ -40,7 +40,7 @@
     .main
       .container
         .sidemenu
-          = render 'layouts/sidemenu'
+          = render :partial => 'layouts/side_menu', :locals => {:items => @side_menu}
         .content
           = yield
     = render 'layouts/footer'

@@ -1,8 +1,8 @@
 Zaleipol::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  # root :to => 'pages#show'
-  # get ":plug" => 'pages#show', :as => :show_page
+  root :to => 'pages#show'
+  get ":plug" => 'pages#show', :as => :show_page
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

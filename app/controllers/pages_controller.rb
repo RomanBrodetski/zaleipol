@@ -5,6 +5,11 @@ class PagesController < ApplicationController
     else
       @page = Page.top.where(:main => true).first
     end
-    render @page.plug
+    @side_menu = @page.top_parent.child_pages
+    begin
+      return render @page.plug
+    rescue
+      return render
+    end
   end
 end

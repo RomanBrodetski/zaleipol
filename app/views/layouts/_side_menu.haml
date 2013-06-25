@@ -1,0 +1,9 @@
+- unless items.empty?
+  %ul
+    - items.each do |item|
+      %li
+        %span{:class => params[:plug] == item.plug ? "item-selected" : ''}
+          = link_to show_page_path(item.plug) do
+            = item.title
+          = image_tag "strike.png", :class => "nav_strike"
+        = render :partial => 'layouts/side_menu', :locals => {:items => item.child_pages}

@@ -13,8 +13,23 @@ Page.create(:plug => "floors",
 Page.create(:plug => "roofs",
             :title => "Крыши")
 
-Page.create(:plug => "facing",
+facing = Page.create(:plug => "facing",
             :title => "Отделка")
+
+cf = Page.create(:plug => "clean_facing",
+            :title => "Чистовая отделка",
+            :parent => facing)
+
+Page.create(:plug => "plaster",
+            :title => "Штукатурка",
+            :parent => cf)
+Page.create(:plug => "putty",
+            :title => "Шпатлевка",
+            :parent => cf)
+Page.create(:plug => "wallpapers",
+            :title => "Обои",
+            :parent => cf)
+
 
 Page.create(:plug => "accessories",
             :title => "Комплектующие")
@@ -26,6 +41,12 @@ Page.create(:plug => "prices",
             :title => "Услуги и цены",
             :main => true)
 
+about = Page.create(:plug => "about",
+            :title => "О компании")
+
+
 Page.create(:plug => "contacts",
-            :title => "Контакты")
+            :title => "Контакты",
+            :parent => about)
+
 
