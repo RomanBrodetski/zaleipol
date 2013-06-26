@@ -42,6 +42,9 @@
         = render :partial => 'layouts/side_menu', :locals => {:items => @side_menu}
         .content
           = yield
+      - if params[:plug] == "contacts"
+        .map
+          = javascript_include_tag '//api-maps.yandex.ru/services/constructor/1.0/js/?sid=LTMeQGWr3zpallaE3fBPUE4wvAfXwLGI&width=100%&height=600'
     = render 'layouts/footer'
     / JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom
     = javascript_include_tag 'application'
