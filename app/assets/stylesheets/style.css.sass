@@ -81,6 +81,7 @@ body
           content: url("strike.png")
 
 
+
 // content styles
 .main
   background-color: white
@@ -130,7 +131,10 @@ body
       content: url("strike.png")
   .has-submenu
     &:after
-      content: "^"
+      content: url("strike-open.png")
+    &:hover
+      &:after
+        content: url("strike-hover.png")
 
 
 // content styles
