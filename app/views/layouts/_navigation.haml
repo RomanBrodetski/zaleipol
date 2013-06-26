@@ -1,6 +1,6 @@
 .header
   =link_to root_path, :class => "header_logo" do
-    =image_tag "logo.jpg", :class => "logo-image"
+    =image_tag "logo.jpg", :class => "logo-image", :width => "290", :height => "75"
   .header-phone
     %ul
       %li
@@ -24,4 +24,4 @@
       %li
         = link_to show_page_path(m.plug), :class => "nav_with-submenu" do
           = m.title
-        = image_tag "strike.png", :class => "nav_strike"
+          = image_tag "strike.png", :class => "nav_strike", :width => "7", :height => "4"

@@ -2,8 +2,7 @@
   %ul
     - items.each do |item|
       %li
-        %span{:class => params[:plug] == item.plug ? "item-selected" : ''}
-          = link_to show_page_path(item.plug) do
-            = item.title
-          = image_tag "strike.png", :class => "nav_strike"
+        = link_to show_page_path(item.plug), :class => params[:plug] == item.plug ? "selected" : '' do
+          = item.title
+          / = image_tag "strike.png"
         = render :partial => 'layouts/side_menu', :locals => {:items => item.child_pages}

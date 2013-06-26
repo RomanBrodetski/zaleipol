@@ -66,16 +66,18 @@ body
   ul
     margin: 0 auto
     width: 1000px
-    padding: 12px
+    padding: 10px
     li
       display: inline
-      padding: 10px 5px 10px 15px
+      padding: 10px 0px
       &:hover
         background-color: $darkblue
       a
         color: white
         text-decoration: none
-        margin-right: 3px
+        padding: 10px 10px 10px 15px
+        img
+          margin-left: 2px
 
 
 // content styles
@@ -101,20 +103,28 @@ body
     padding: 0
     margin: 0
     ul
-      padding-left: 40px
+      padding-left: 20px
   a
     color: $black
     padding-right: 3px
-  span
     display: inline-block
-    padding: 10px 10px 7px 10px
-  .item-selected
+    padding: 10px 15px 7px 15px
+    text-decoration: none
+    img
+      margin-left: 2px
+    &:hover
+      color: $blue
+  .selected
     background-color: $blue
     -webkit-border-radius: 7px
     -moz-border-radius: 7px
     border-radius: 7px
-    a
+    color: white
+    &:hover
       color: white
+  .selected.has-submenu
+    &:after
+      content: url("strike.png")
 
 
 // content styles
