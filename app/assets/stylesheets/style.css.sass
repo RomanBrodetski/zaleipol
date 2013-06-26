@@ -76,8 +76,9 @@ body
         color: white
         text-decoration: none
         padding: 10px 10px 10px 15px
-        img
-          margin-left: 2px
+      .has-submenu
+        &:after
+          content: url("strike.png")
 
 
 // content styles
@@ -94,10 +95,12 @@ body
 
 // sidemenu styles
 .sidemenu
-  display: inline-block
+  // display: inline-block
+  position: absolute
+  width: 100%
   vertical-align: top
   font-size: 90%
-  width: 350px
+  width: 280px
   ul
     list-style-type: none
     padding: 0
@@ -125,13 +128,17 @@ body
   .selected.has-submenu
     &:after
       content: url("strike.png")
+  .has-submenu
+    &:after
+      content: "^"
 
 
 // content styles
 .content
-  display: inline-block
+  // display: inline-block
+  margin-left: 280px
   vertical-align: top
-  padding: 0px 20px
+  padding: 10px 20px
   font-size: 80%
   line-height: 130%
   h1

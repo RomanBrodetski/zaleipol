@@ -22,6 +22,5 @@
   %ul
     - @top_menu.each do |m|
       %li
-        = link_to show_page_path(m.plug), :class => "nav_with-submenu" do
+        = link_to show_page_path(m.plug), :class => m.child_pages.empty? ? "" : "has-submenu" do
           = m.title
-          = image_tag "strike.png", :class => "nav_strike", :width => "7", :height => "4"
