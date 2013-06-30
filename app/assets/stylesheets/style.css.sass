@@ -1,6 +1,7 @@
 $blue: #367ab9
 $black: #010101
 $darkblue: #195587
+$grey: #e2e1e1
 
 body
   background: url('bg.jpg') white
@@ -174,6 +175,17 @@ body
     // font: 90% Arial
     margin: 0 0 15px 0
     // line-height: 120%
+  .border-table
+    display: inline-block
+    border: 5px solid $grey
+    border-radius: 15px
+    padding: 10px
+    tr
+      border-bottom: 1px solid $grey
+      &:last-child
+        border: none
+      th, td
+        padding: 5px 15px 5px 0
 
 
 
