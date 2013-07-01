@@ -1,6 +1,6 @@
 Zaleipol::Application.routes.draw do
 
-  get "reviews" => "reviews#index"
+  get "reviews" => "reviews#index", :as => :reviews
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   root :to => 'pages#show'

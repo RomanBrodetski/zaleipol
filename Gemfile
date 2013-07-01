@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk', '~> 1.3.4'
 gem 'rails', '3.2.13'
 gem 'codemirror-rails'
+gem 'bootstrap-wysihtml5-rails'
 gem 'rails_admin', '0.4.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -4,7 +4,7 @@
       - items.each do |item|
         %li
           - classes = ''
-          - classes << 'selected ' if params[:plug] == item.plug
+          - classes << 'selected ' if params[:plug] == item.plug || params[:controller] == item.plug
           - classes << 'has-submenu ' unless item.child_pages.empty?
           = link_to show_page_path(item.plug), :class =>  classes do
             = item.title
