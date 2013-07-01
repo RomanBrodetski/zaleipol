@@ -57,3 +57,10 @@ Page.create(:plug => "reviews",
             :parent => about)
 
 
+20.times do |t|
+   Review.create(:title => "title#{t}",
+                  :comment => "comment#{t}")
+end
+3.times do |t|
+   Banner.create
+end

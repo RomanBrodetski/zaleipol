@@ -4,7 +4,9 @@ class Review < ActiveRecord::Base
 				  :image_file_name,
 				  :image_file_size,
 				  :image_updated_at,
-				  :image
+				  :image,
+          :title,
+          :comment
 
   has_attached_file :image,  :styles => {
      :thumb => "300x120>",

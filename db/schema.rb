@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20130701111928) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "title"
+    t.string   "comment"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end

@@ -6,7 +6,7 @@ class Banner < ActiveRecord::Base
 				  :image_updated_at,
 				  :image
 
-  validates_presence_of :image_file_name
+  # validates_presence_of :image_file_name
 
   has_attached_file :image,  :styles => {
      :full => "996x400>",
