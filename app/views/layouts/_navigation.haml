@@ -24,3 +24,16 @@
       %li
         = link_to show_page_path(m.plug), :class => m.child_pages.empty? ? "" : "has-submenu" do
           = m.title
+        .popup
+          %ul
+            - m.child_pages.each do |c|
+              %li
+                = link_to show_page_path(c.plug) do
+                  = c.title
+
+:javascript
+  $('.popup').each(function(i, elem) {
+      li = $(elem).prev()
+      $(elem).css(li.offset())
+      $(elem).css('min-width', li.width())
+    })
