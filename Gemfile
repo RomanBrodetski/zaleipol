@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'codemirror-rails'
 gem 'rails_admin', '0.4.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,7 +14,6 @@ group :production do
 end
 gem "paperclip"
 gem 'haml'
-gem 'codemirror-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
