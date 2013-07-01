@@ -24,7 +24,7 @@
       %li
         = link_to show_page_path(m.plug), :class => m.child_pages.empty? ? "" : "has-submenu" do
           = m.title
-        .popup{:style => "position:absolute;padding-top:35px;margin-left:-18px;"}
+        .popup
           %ul
             - m.child_pages.each do |c|
               %li
