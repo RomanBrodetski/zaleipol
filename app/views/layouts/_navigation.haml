@@ -32,8 +32,21 @@
                   = c.title
 
 :javascript
-  $('.popup').each(function(i, elem) {
-      li = $(elem).prev()
-      $(elem).css(li.offset())
-      $(elem).css('min-width', li.width())
+  $('.popup').hide()
+  $(function() {
+    $(".nav li").on('mouseover', function(i){
+      p = $(i.target).closest('li').find('.popup').show()
+      p.css($(i.target).closest('li').offset())
+      p.css('min-width', $(i.target).closest('li').width())
+      p.css('margin-top', 37)
     })
+    $(".nav li").on('mouseout', function(event){
+        var e = event.toElement || event.relatedTarget;
+        if ($(e).closest('.nav>ul>li')[0] == $(event.target).closest('.nav>ul>li')[0]) {
+           return;
+        }
+      $('.popup').hide()
+    })
+  });
+
+

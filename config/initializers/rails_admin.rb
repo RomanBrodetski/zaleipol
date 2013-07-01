@@ -15,10 +15,22 @@ RailsAdmin.config do |config|
 
   config.model 'Page' do
       edit do
+        field :plug
         field :parent
         field :title
         field :description, :ckeditor
-        include_all_fields
+      end
+      show do
+        field :plug
+        field :parent
+        field :title
+        field :description, :ckeditor
+        field :child_pages
+      end
+      list do
+        field :plug
+        field :parent
+        field :title
       end
   end
 
