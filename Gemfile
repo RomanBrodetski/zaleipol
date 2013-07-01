@@ -8,8 +8,10 @@ gem 'rails_admin', '0.4.8'
 group :development do
 	gem 'sqlite3'
 end
-
-
+group :production do
+	gem 'pg'
+end
+gem "paperclip"
 gem 'haml'
 
 # Gems used only for assets and not required
