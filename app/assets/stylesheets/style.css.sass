@@ -219,13 +219,27 @@ body
     -webkit-border-radius: 10px
     -moz-border-radius: 10px
     border-radius: 10px
-    &:before
-      height: 0
-      width: 100px
-      content: ""
-      position: absolute
-      border-bottom: 100px solid blue
-      border-left: 100px solid white
+    // &:before
+    //   height: 0
+    //   width: 100px
+    //   content: ""
+    //   position: absolute
+    //   border-bottom: 100px solid blue
+    //   border-left: 100px solid white
+    .slider-prev, .slider-next
+      position: relative
+      top: -200px
+      width: 36px
+      height: 36px
+      background: $blue
+      border-radius: 36px
+      text-align: center
+      &:hover
+        background: $black
+    .slider-prev
+      right: -40px
+    .slider-next
+      right: -900px
 .index-page
   margin-left: -280px
   *
