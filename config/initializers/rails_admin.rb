@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description, :code_mirror  
+        field :description#, :wysihtml5  
       end
       show do
         field :plug
