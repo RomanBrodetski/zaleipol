@@ -7,6 +7,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Page.create(:plug => "index",
+            :title => "Главная",
+            :main => true)
+
 Page.create(:plug => "floors",
             :title => "Полы")
 
@@ -38,8 +42,7 @@ Page.create(:plug => "rent",
             :title => "Аренда оборудования")
 
 Page.create(:plug => "prices",
-            :title => "Услуги и цены",
-            :main => true)
+            :title => "Услуги и цены")
 
 about = Page.create(:plug => "about",
             :title => "О компании")

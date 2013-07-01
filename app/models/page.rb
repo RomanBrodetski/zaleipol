@@ -5,7 +5,7 @@ class Page < ActiveRecord::Base
     :foreign_key => "parent_id"
   belongs_to :parent, :class_name => "Page"
 
-  scope :top, where(:parent_id => nil)
+  scope :top, where(:parent_id => nil, :main => false)
 
   def top_parent
     parent.top_parent rescue self
