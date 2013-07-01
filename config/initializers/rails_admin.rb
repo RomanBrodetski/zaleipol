@@ -18,13 +18,13 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description, :ckeditor
+        field :description, :ck_editor
       end
       show do
         field :plug
         field :parent
         field :title
-        field :description, :ckeditor
+        field :description
         field :child_pages
       end
       list do
