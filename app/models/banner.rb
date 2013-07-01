@@ -9,7 +9,7 @@ class Banner < ActiveRecord::Base
   validates_presence_of :image_file_name
 
   has_attached_file :image,  :styles => {
-     :mailing => "996x400>",
+     :full => "996x400>",
     },
     :storage => :s3,
     :s3_credentials => {

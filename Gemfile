@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk', '~> 1.3.4'
 gem 'rails', '3.2.13'
 gem 'codemirror-rails'
 gem 'rails_admin', '0.4.8'

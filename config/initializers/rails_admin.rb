@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description, :code_mirror
+        field :description, :code_mirror  
       end
       show do
         field :plug
@@ -31,6 +31,12 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
+      end
+  end
+
+  config.model 'Review' do
+      edit do
+        field :image, :paperclip
       end
   end
 
