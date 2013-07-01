@@ -52,4 +52,8 @@ Page.create(:plug => "contacts",
             :title => "Контакты",
             :parent => about)
 
+Page.create(:plug => "reviews",
+            :title => "Отзывы и рекомендации",
+            :parent => about)
+
 
