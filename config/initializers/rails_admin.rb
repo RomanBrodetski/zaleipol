@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description, :ck_editor
+        field :description, :code_mirror
       end
       show do
         field :plug
