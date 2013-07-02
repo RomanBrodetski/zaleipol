@@ -212,45 +212,75 @@ body
   margin: auto
   padding-top: 35px
   padding-bottom: 45px
-  .slider-img
-    height: 100%
+  margin-left: -280px
+  #banner-fade
     width: 100%
-    background-color: grey
-    -webkit-border-radius: 10px
-    -moz-border-radius: 10px
-    border-radius: 10px
-    // &:before
-    //   height: 0
-    //   width: 100px
-    //   content: ""
-    //   position: absolute
-    //   border-bottom: 100px solid blue
-    //   border-left: 100px solid white
-    .slider-prev, .slider-next
+    height: 100%
+    ul.bjqs
       position: relative
-      top: -200px
-      width: 36px
-      height: 36px
-      background: $blue
-      border-radius: 36px
+      list-style: none
+      padding: 0
+      margin: 0 
+      overflow: hidden
+      display: none
+    li.bjqs-slide
+      position: absolute
+      display: none
+    ul.bjqs-controls
+      list-style: none
+      margin: 0
+      padding: 0
+      z-index: 9999
+    ul.bjqs-controls.v-centered li a
+      position: absolute
+    ul.bjqs-controls.v-centered li.bjqs-next a
+      right: 0
+    ul.bjqs-controls.v-centered li.bjqs-prev a
+      left: 0
+    ol.bjqs-markers
+      list-style: none
+      position: absolute
+      padding: 0
+      margin: 0
+      margin-top: -20px
+      width: 100%
+      li a
+        background: #aaa
+        width: 10px
+        height: 10px
+        border-radius: 10px
+        margin-right: 5px
+      .active-marker a
+        background: white
+    ol.bjqs-markers.h-centered 
       text-align: center
-    .slider-prev
-      right: -40px
-      background: $blue url("prev.png") no-repeat 10px 8px
-      &:hover
-        background: $black url("prev.png") no-repeat 10px 8px
-    .slider-next
-      right: -900px
-      background: $blue url("next.png") no-repeat 16px 8px
-      &:hover
-        background: $black url("next.png") no-repeat 16px 8px
-    .slider-circle
-      position: relative
-      top: -50px
-      width: 10px
-      height: 10px
-      border-radius: 10px
-      background: blue
+    ol.bjqs-markers li
+      display: inline
+    ol.bjqs-markers li a
+      display: inline-block
+    p.bjqs-caption
+      display: block
+      width: 96%
+      margin: 0
+      padding: 2%
+      position: absolute
+      bottom: 0
+  .bjqs-prev a, .bjqs-next a
+    width: 36px
+    height: 36px
+    background: $black
+    border-radius: 36px
+    text-align: center
+    margin: 0 20px
+    &:hover
+      background: $blue
+  .bjqs-next a img
+    padding-top: 7px
+    padding-left: 7px
+  .bjqs-prev a img
+    padding-top: 7px
+    padding-right: 7px
+
 .index-page
   margin-left: -280px
   *
