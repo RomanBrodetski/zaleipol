@@ -18,13 +18,13 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description#, :wysihtml5  
+        field :text, :wysihtml5  
       end
       show do
         field :plug
         field :parent
         field :title
-        field :description
+        field :text
         field :child_pages
       end
       list do
