@@ -62,5 +62,5 @@ Page.create(:plug => "reviews",
                   :comment => "comment#{t}")
 end
 3.times do |t|
-   Banner.create
+   Banner.create 
 end

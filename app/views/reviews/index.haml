@@ -4,8 +4,8 @@
   - @reviews.each do |r|
     %li.gallery-item
       = image_tag "item.jpg", :class => "gallery-img"
-    %h3
-      = r.title
-    %span
-      = r.comment
+      %h3
+        = r.title
+      %span
+        = r.comment
 = link_to "Показать еще", reviews_path(:page => (params[:page] || 1) + 1), :class => 'show-more'

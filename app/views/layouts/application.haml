@@ -42,7 +42,7 @@
       .container
         = render :partial => 'layouts/side_menu', :locals => {:items => @side_menu}
         .content
-          = render :partial => "banner" if params[:plug] == 'index'
+          = render :partial => "layouts/banner" if @page && @page.plug == 'index'
           = yield
       - if params[:plug] == "contacts"
         .map
