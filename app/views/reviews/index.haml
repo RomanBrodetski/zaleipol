@@ -3,10 +3,14 @@
 %ul.gallery
   - @reviews.each do |r|
     %li
-      = link_to "#", :class => "gallery-item" do
+      = link_to "/assets/photo.png", :class => "gallery-item", :rel => "rr" do
         = image_tag "item.jpg", :class => "gallery-img"
         %h3
           = r.title
         %span
           = r.comment
-= link_to "Показать еще", reviews_path(:page => (params[:page] || 1) + 1), :class => 'show-more'
+- if @has_more
+  = link_to "Показать еще", reviews_path(:page => params[:page].to_i + 1), :class => 'show-more'
+
+:javascript
+  $('a.gallery-item').colorbox({rel:'gal'});
