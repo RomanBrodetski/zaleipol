@@ -18,7 +18,7 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :text, :wysihtml5  
+        field :text#, :wysihtml5  
       end
       show do
         field :plug
