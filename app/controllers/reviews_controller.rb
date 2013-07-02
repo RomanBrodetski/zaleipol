@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
   	@side_menu = @page.top_parent.child_pages
 
   	@reviews = Review.limit(PageLength)
-  	@reviews = @reviews.skip(PageLength * params[:page].to_i - 1) if params[:page]
+  	@reviews = Review.offset(PageLength * params[:page].to_i).limit(PageLength) if params[:page]
+  	@has_more = Review.all.count > PageLength * (params[:page].to_i  + 1)
   end
 end
