@@ -39,5 +39,11 @@ RailsAdmin.config do |config|
         field :image, :paperclip
       end
   end
+  
+  config.model 'Banner' do
+      edit do
+        field :image, :paperclip
+      end
+  end
 
 end

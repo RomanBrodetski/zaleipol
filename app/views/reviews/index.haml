@@ -3,8 +3,8 @@
 %ul.gallery
   - @reviews.each do |r|
     %li
-      = link_to "/assets/photo.png", :class => "gallery-item", :rel => "rr" do
-        = image_tag "item.jpg", :class => "gallery-img"
+      = link_to r.image.url(:full).to_eu, :class => "gallery-item", :rel => "rr" do
+        = image_tag r.image.url(:thumb).to_eu, :class => "gallery-img"
         %h3
           = r.title
         %span

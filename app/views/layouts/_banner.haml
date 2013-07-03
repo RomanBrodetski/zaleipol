@@ -1,18 +1,15 @@
 .slider
   #banner-fade
     %ul.bjqs
-      %li
-        = image_tag "slider.png"
-      %li
-        = image_tag "slider1.png"
-      %li
-        = image_tag "slider2.png"
-
-  :javascript
-    jQuery(document).ready(function($) {
+      - Banner.all.each do |b|
+        %li
+          = image_tag b.image.url(:full).to_eu
+          
+:javascript
+  jQuery(document).ready(function($) {
       $('#banner-fade').bjqs({
-              height      : 400,
-              width       : 996,
-              responsive  : true
-      });
+            height      : 400,
+            width       : 996,
+            responsive  : true
     });
+  });
