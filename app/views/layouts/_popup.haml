@@ -1,0 +1,30 @@
+%form{:id => "popup", :class => "modal"}
+  %h1
+    Обратный звонок
+  %dl
+    %dt
+      Представтесь, пожалуйста*:
+    %dd
+      %input{:type => "text", :name => "name"}
+    %dt
+      Контактный телефон*:
+    %dd
+      %input{:type => "tel", :name => "phone"}
+      %p
+        Например: (905) 556-76-87
+    %dt
+      E-mail:
+    %dd
+      %input{:type => "email", :name => "mail"}
+    %dt
+      Комментарий:
+    %dd
+      %textarea{:rows => "4", :cols => "26", :placeholder => "Например, звонить, не раньше 6 утра"}
+      %p
+        * - поля, отмеченные звездочкой, обязательны для выполнения.
+  %input{:type => "submit", :value => "Оставить заявку"}
+
+:javascript
+  $('.popup-link').on('click', function(){
+    $('#popup').modal();
+  })

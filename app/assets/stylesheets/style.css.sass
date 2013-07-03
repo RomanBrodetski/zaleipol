@@ -7,6 +7,44 @@ body
   background: url('bg.jpg') white
   font: 100% "elektra_text_proregular"
 
+//popup
+#popup
+  h1
+    font: 120% "elektra_text_probold"
+    color: $blue
+    margin-left: 190px
+  p
+    margin: 10px 0
+  dl
+    font-size: 80%
+    dt, dd
+      display: inline-block
+      vertical-align: top
+      margin-bottom: 20px
+    dt
+      padding-top: 7px
+      width: 180px
+      text-align: right
+      margin-right: 5px
+    dd
+      margin: 0
+      width: 200px
+      text-align: left
+    input, textarea
+      width: 195px
+      border-radius: 5px
+      border: 1px solid $grey
+      padding: 5px
+
+  > input
+    float: right
+    padding: 5px 10px
+    border: none
+    color: white
+    background: $blue
+    border-radius: 5px
+    font-size: 90%
+    margin-right: 5px
 
 // header styles
 .header
@@ -81,11 +119,12 @@ body
       .has-submenu
         &:after
           content: url("strike.png")
-  .popup
+  .menu
     display: inline
     position: absolute
     margin-top: 27px
     background: $blue
+    z-index: 100
     ul
       margin: 0
       width: auto
