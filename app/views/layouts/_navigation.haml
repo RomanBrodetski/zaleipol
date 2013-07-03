@@ -8,22 +8,21 @@
         %span
           8 (812) 448-53-77
       %li
-        %a
-          Заказать обратный звонок
+        = link_to "Заказать обратный звонок", "#", :class => "popup-link"
   .header-adress
     %ul
       %li
         Санкт-Петербург, Итальянская ул. д. 2
       %li
         офис 505
-        = link_to "На карте", show_page_path(:contacts)
+        = link_to "На карте", show_page_path("contacts")
 .nav
   %ul
     - @top_menu.each do |m|
       %li
         = link_to show_page_path(m.plug), :class => m.child_pages.empty? ? "" : "has-submenu" do
           = m.title
-        .popup
+        .menu
           %ul
             - m.child_pages.each do |c|
               %li
@@ -31,10 +30,10 @@
                   = c.title
 
 :javascript
-  $('.popup').hide()
+  $('.menu').hide()
   $(function() {
     $(".nav li").on('mouseover', function(i){
-      p = $(i.target).closest('li').find('.popup').show()
+      p = $(i.target).closest('li').find('.menu').show()
       p.css($(i.target).closest('li').offset())
       p.css('min-width', $(i.target).closest('li').width())
       p.css('margin-top', 37)
@@ -44,7 +43,7 @@
         if ($(e).closest('.nav>ul>li')[0] == $(event.target).closest('.nav>ul>li')[0]) {
            return;
         }
-      $('.popup').hide()
+      $('.menu ').hide()
     })
   });
 

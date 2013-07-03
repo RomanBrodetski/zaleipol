@@ -30,7 +30,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'jquery-ui-rails'
 gem 'rails-boilerplate'
 
 gem 'haml'
