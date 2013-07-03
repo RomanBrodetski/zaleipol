@@ -6,9 +6,12 @@ class PagesController < ApplicationController
       @page = Page.where(:main => true).first
     end
     @side_menu = @page.top_parent.child_pages
-    if @page.text.to_s == ''
+    unless @page.text.to_s == ''
+      return render
+    end
+    begin
       return render @page.plug
-    else
+    rescue
       return render
     end
   end
