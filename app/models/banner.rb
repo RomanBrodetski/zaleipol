@@ -12,9 +12,11 @@ class Banner < ActiveRecord::Base
      :full => "996x400>",
     },
     :storage => :s3,
+    :url  => ":s3_eu_url",
+    :path => "/:class/:attachment/:id_partition/:style/:filename",
     :s3_credentials => {
       :bucket            => "zaleipol",
-      :access_key_id     => "AKIAIGBC6QKGXEAW4LGA",
-      :secret_access_key => "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"
+      :access_key_id     => "AKIAJ2VBY3U4STWRR5EA",
+      :secret_access_key => "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"
     }
 end
