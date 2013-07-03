@@ -37,9 +37,11 @@ RailsAdmin.config do |config|
   config.model 'Review' do
       edit do
         field :image, :paperclip
+        field :comment, :string
+        field :title, :string
       end
   end
-  
+
   config.model 'Banner' do
       edit do
         field :image, :paperclip
