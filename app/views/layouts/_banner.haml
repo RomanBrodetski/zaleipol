@@ -3,8 +3,8 @@
     %ul.bjqs
       - Banner.all.each do |b|
         %li
-          = image_tag b.image.url(:full).to_eu
-          
+          = image_tag b.image.url(:full)#.to_eu
+
 :javascript
   jQuery(document).ready(function($) {
       $('#banner-fade').bjqs({
