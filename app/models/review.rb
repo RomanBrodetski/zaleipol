@@ -13,6 +13,7 @@ class Review < ActiveRecord::Base
     },
     :storage => :s3,
     :url  => ":s3_eu_url",
+    :path => "/:class/:attachment/:id_partition/:style/:filename'"
     :s3_credentials => {
       :bucket            => "zaleipol",
       :access_key_id     => "AKIAJ2VBY3U4STWRR5EA",
