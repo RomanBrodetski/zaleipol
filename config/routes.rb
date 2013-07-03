@@ -1,5 +1,7 @@
 Zaleipol::Application.routes.draw do
 
+  resources :requests, :only => :create
+
   get "reviews" => "reviews#index", :as => :reviews
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

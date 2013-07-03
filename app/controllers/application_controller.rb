@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_filter :prepare_navigation
 
   def prepare_navigation
+  	@request = Request.new
     @top_menu = Page.top
   end
 end

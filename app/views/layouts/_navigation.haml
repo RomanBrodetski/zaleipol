@@ -16,8 +16,7 @@
         Санкт-Петербург, Итальянская ул. д. 2
       %li
         офис 505
-        %a
-          На карте
+        = link_to "На карте", show_page_path(:contacts)
 .nav
   %ul
     - @top_menu.each do |m|
