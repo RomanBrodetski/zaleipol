@@ -60,11 +60,12 @@ module Zaleipol
     config.assets.version = '1.0'
   end
 end
-Paperclip.interpolates(:s3_eu_url) { |attachment, style|
-  "#{attachment.s3_protocol}://s3-eu-west-1.amazonaws.com/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/}, "")}"
-}
-module AWS
-    module S3
-        DEFAULT_HOST = "s3-eu-west-1.amazonaws.com"
-    end
-end
+# Paperclip.interpolates(:s3_eu_url) { |attachment, style|
+#   "#{attachment.s3_protocol}://s3-eu-west-1.amazonaws.com/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/}, "")}"
+# }
+# module AWS
+#     module S3
+#         DEFAULT_HOST = "s3-eu-west-1.amazonaws.com"
+#     end
+# end
+AWS.config(access_key_id: 'AKIAJ2VBY3U4STWRR5EA', secret_access_key: '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', region: 'us-west-1')
