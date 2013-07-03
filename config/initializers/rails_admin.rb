@@ -18,13 +18,13 @@ RailsAdmin.config do |config|
         field :plug
         field :parent
         field :title
-        field :description#, :wysihtml5  
+        field :text#, :wysihtml5  
       end
       show do
         field :plug
         field :parent
         field :title
-        field :description
+        field :text
         field :child_pages
       end
       list do
@@ -35,6 +35,12 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Review' do
+      edit do
+        field :image, :paperclip
+      end
+  end
+  
+  config.model 'Banner' do
       edit do
         field :image, :paperclip
       end
