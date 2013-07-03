@@ -9,50 +9,64 @@
 
 Page.create(:plug => "index",
             :title => "Главная",
-            :main => true)
+            :main => true,
+            :weight => 100)
 
 Page.create(:plug => "floors",
-            :title => "Полы")
+            :title => "Полы",
+            :weight => 90)
 
 Page.create(:plug => "roofs",
-            :title => "Крыши")
+            :title => "Крыши",
+            :weight => 80)
 
 facing = Page.create(:plug => "facing",
-            :title => "Отделка")
+            :title => "Отделка",
+            :weight => 70)
 
 cf = Page.create(:plug => "clean_facing",
             :title => "Чистовая отделка",
-            :parent => facing)
+            :parent => facing,
+            :weight => 100)
 
 Page.create(:plug => "plaster",
             :title => "Штукатурка",
-            :parent => cf)
+            :parent => cf,
+            :weight => 100)
 Page.create(:plug => "putty",
             :title => "Шпатлевка",
-            :parent => cf)
+            :parent => cf,
+            :weight => 90)
 Page.create(:plug => "wallpapers",
             :title => "Обои",
-            :parent => cf)
+            :parent => cf,
+            :weight => 80)
 
 
 Page.create(:plug => "accessories",
-            :title => "Комплектующие")
+            :title => "Комплектующие",
+            :weight => 60)
 
 Page.create(:plug => "rent",
-            :title => "Аренда оборудования")
+            :title => "Аренда оборудования",
+            :weight => 50)
 
 Page.create(:plug => "prices",
-            :title => "Услуги и цены")
+            :title => "Услуги и цены",
+            :weight => 40)
 
 about = Page.create(:plug => "about",
-            :title => "О компании")
+            :title => "О компании",
+            :weight => 30)
 
 
 Page.create(:plug => "contacts",
             :title => "Контакты",
-            :parent => about)
+            :parent => about,
+            :weight => 100)
 
 Page.create(:plug => "reviews",
             :title => "Отзывы и рекомендации",
-            :parent => about)
+            :parent => about,
+            :weight => 90)
 

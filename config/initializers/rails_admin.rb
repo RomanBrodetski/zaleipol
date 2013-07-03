@@ -28,12 +28,14 @@ RailsAdmin.config do |config|
         field :text do
           ckeditor true
         end
+        field :weight
       end
       show do
         field :plug
         field :parent
         field :title
         field :text
+        field :weight
         field :child_pages
       end
       list do
@@ -52,6 +54,12 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Banner' do
+      edit do
+        field :image, :paperclip
+      end
+  end
+
+  config.model 'Request' do
       edit do
         field :image, :paperclip
       end
