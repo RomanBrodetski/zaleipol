@@ -48,7 +48,8 @@
         .map
           = javascript_include_tag '//api-maps.yandex.ru/services/constructor/1.0/js/?sid=LTMeQGWr3zpallaE3fBPUE4wvAfXwLGI&width=100%&height=600'
     = render 'layouts/footer'
-    = render :partial => 'layouts/popup'
+    .popup-area
+      = render :partial => 'layouts/popup'
     
     - if Rails.env.production?
       /

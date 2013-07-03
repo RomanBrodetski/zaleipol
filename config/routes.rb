@@ -1,6 +1,6 @@
 Zaleipol::Application.routes.draw do
 
-  resources :requests, :only => :create
+  post "request" => "requests#create"
 
   get "reviews" => "reviews#index", :as => :reviews
 

@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def create
   	Request.create params[:request]
-  	{:status => :ok}.to_json
+  	render :layout => false
   end
 end

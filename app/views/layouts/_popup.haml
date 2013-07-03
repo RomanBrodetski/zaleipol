@@ -1,25 +1,23 @@
-%form{:id => "popup", :class => "modal"}
+= form_for @request, :url => request_path, :verb => "POST", :remote => true ,:html => {:id => "popup", :class => "modal"} do |f|
   %h1
     Обратный звонок
   %dl
     %dt
       Представтесь, пожалуйста*:
     %dd
-      %input{:type => "text", :name => "name"}
+      = f.text_field :name, :required => true
     %dt
       Контактный телефон*:
     %dd
-      %input{:type => "tel", :name => "phone"}
-      %p
-        Например: (905) 556-76-87
+      = f.text_field :phone, :requered => true, :pattern => '((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}', :placeholder => "+7(xxx)xxx-xx-xx"
     %dt
       E-mail:
     %dd
-      %input{:type => "email", :name => "mail"}
+      = f.email_field :email, :required => true
     %dt
       Комментарий:
     %dd
-      %textarea{:rows => "4", :cols => "26", :placeholder => "Например, звонить, не раньше 6 утра"}
+      = f.text_area :comment, :rows => "4", :cols => "26", :placeholder => "Например, звонить, не раньше 6 утра"
       %p
         * - поля, отмеченные звездочкой, обязательны для выполнения.
   %input{:type => "submit", :value => "Оставить заявку"}
@@ -27,4 +25,8 @@
 :javascript
   $('.popup-link').on('click', function(){
     $('#popup').modal();
+  })
+  $("#popup").on("ajax:complete", function(e, data, status, xhr) {
+    $(".popup-area").html(data.responseText)
+    $('#popup').modal();    
   })
