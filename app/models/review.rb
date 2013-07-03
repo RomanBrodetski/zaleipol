@@ -7,6 +7,9 @@ class Review < ActiveRecord::Base
           :title,
           :comment
 
+
+  validates_presence_of :image_file_name, :title
+
   has_attached_file :image,  :styles => {
      :thumb => "300x120>",
      :full => "900x460>"

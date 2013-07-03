@@ -13,12 +13,21 @@ RailsAdmin.config do |config|
   # Set the admin name here (optional second array element will appear in red). For example:
   config.main_app_name = ['Zaleipol', 'Admin']
 
+
+  config.models do
+    fields_of_type :text do
+      ckeditor true
+    end
+  end
+
   config.model 'Page' do
       edit do
         field :plug
         field :parent
         field :title
-        field :text#, :wysihtml5  
+        field :text do
+          ckeditor true
+        end
       end
       show do
         field :plug
