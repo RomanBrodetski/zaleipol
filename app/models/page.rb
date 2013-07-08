@@ -6,6 +6,8 @@ class Page < ActiveRecord::Base
   belongs_to :parent, :class_name => "Page"
 
   scope :top, where(:parent_id => nil, :main => false)
+  default_scope order("weight DESC")
+
 
   def top_parent
     parent.top_parent rescue self
