@@ -29,6 +29,7 @@ RailsAdmin.config do |config|
           ckeditor true
         end
         field :weight
+        field :hidden
       end
       show do
         field :plug

@@ -20,11 +20,11 @@
   %ul
     - @top_menu.each do |m|
       %li
-        = link_to show_page_path(m.plug), :class => m.child_pages.empty? ? "" : "has-submenu" do
+        = link_to show_page_path(m.plug), :class => m.child_pages.where(:hidden => false).empty? ? "" : "has-submenu" do
           = m.title
         .menu
           %ul
-            - m.child_pages.each do |c|
+            - m.child_pages.where(:hidden => false).each do |c|
               %li
                 = link_to show_page_path(c.plug) do
                   = c.title

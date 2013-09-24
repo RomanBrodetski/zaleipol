@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 
   def prepare_navigation
   	@request = Request.new
-    @top_menu = Page.top
+    @top_menu = Page.where(:hidden => false).top
   end
 end

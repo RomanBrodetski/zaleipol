@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :parent_id, :plug, :text, :title, :main, :weight, :parent
+  attr_accessible :parent_id, :plug, :text, :title, :main, :weight, :hidden, :parent
 
   has_many :child_pages, :class_name => "Page",
     :foreign_key => "parent_id"

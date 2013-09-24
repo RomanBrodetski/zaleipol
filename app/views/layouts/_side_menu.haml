@@ -9,4 +9,4 @@
           = link_to show_page_path(item.plug), :class =>  classes do
             = item.title
             / = image_tag "strike.png"
-          = render :partial => 'layouts/side_menu', :locals => {:items => item.child_pages}
+          = render :partial => 'layouts/side_menu', :locals => {:items => item.child_pages.where(:hidden => "false")}
