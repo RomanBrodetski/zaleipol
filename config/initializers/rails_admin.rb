@@ -16,7 +16,8 @@ RailsAdmin.config do |config|
 
   config.models do
     fields_of_type :text do
-      ckeditor true
+      # ckeditor true
+      bootstrap_wysihtml5 true
     end
   end
 
@@ -26,7 +27,8 @@ RailsAdmin.config do |config|
         field :parent
         field :title
         field :text do
-          ckeditor true
+          # ckeditor true
+          bootstrap_wysihtml5 true
         end
         field :weight
         field :hidden, :boolean
